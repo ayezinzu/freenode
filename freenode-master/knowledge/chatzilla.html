@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="knowledge.css">
+    <title>freenode | Chatzilla</title>
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="container">
+            <nav class="desktop-nav">
+                <div class="logo"><a href="/freenode/index.html">free<span class="green">node</span></a></div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="/freenode/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://webchat.freenode.net/">Chat</a>
+                        </li>
+                        <li>
+                            <a href="#greeting-modal" href="https://freenode.net/kb/all">Knowledge</a>
+                        </li>
+                        <li>
+                            <a href="https://bbs.freenode.net/">Share</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search_box">
+                    <img class="fas fa-search" src="/freenode/images/search.png" alt="Search" />
+                    <input type="text" placeholder="       Search">
+                </div>
+            </nav>
+
+            <!-- Mobile nav -->
+            <nav class="mobile-nav">
+                <div>
+                    <a href="#nav-modal"><img src="/freenode/images/nav.png" alt="Navigation icon" /></a>
+                    <p>free<span class="green">node</span></p>
+                </div>
+                <img src="/freenode/images/search.png" alt="Search" />
+            </nav>
+
+            <!-- Mobile nav -->
+            <div class="mobile-modal-nav-container" id="nav-modal">
+                <div class="mobile-modal-nav">
+                    <ul>
+                        <li><a href="/freenode/index.html">Home</a></li>
+                        <hr>
+                        <li><a href="https://webchat.freenode.net/">Chat</a></li>
+                        <hr>
+                        <!--
+                          <li>Knowledge base</li>
+                      -->
+                        <div class="accordionMenu">
+                            <input type="radio" name="trg1" id="acc1">
+                            <label for="acc1">Knowledge base</label>
+                            <div class="content">
+                                <ul class="inner">
+                                    <li><a href="/freenode/knowledge/certfp.html">CertFP</a></li>
+                                    <li><a href="/freenode/knowledge/channels.html">Channels</a></li>
+                                    <li><a href="/freenode/knowledge/sasl.html">Connecting with SASL</a></li>
+                                    <li><a href="/freenode/knowledge/findingchannels.html">Finding Channels</a></li>
+                                    <li><a href="/freenode/knowledge/resetpass.html">Resetting your Password</a></li>
+                                    <li><a href="/freenode/knowledge/channelmodes.html">Channel Modes</a></li>
+                                    <li><a href="/freenode/knowledge/chat.html">Connecting to freenode</a></li>
+                                    <li><a href="/freenode/knowledge/extbans.html">Extbans</a></li>
+                                    <li><a href="/freenode/knowledge/registration.html">Nickname Registration</a></li>
+                                    <li><a href="/freenode/knowledge/usermodes.html">User Modes</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <li><a href="https://bbs.freenode.net/">Share</a></li>
+                        <hr>
+                    </ul>
+                </div>
+
+                <!-- Background, click to close -->
+                <a href="#" class="nav-modal-bg"></a>
+            </div>
+
+            <!-- Modal container -->
+            <div class="modal-container" id="greeting-modal">
+
+                <!-- Modal  -->
+                <div class="modal">
+                    <div>
+                        <ul>
+                            <li><a href="/freenode/knowledge/certfp.html">CertFP</a></li>
+                            <li><a href="/freenode/knowledge/channels.html">Channels</a></li>
+                            <li><a href="/freenode/knowledge/sasl.html">Connecting with SASL</a></li>
+                            <li><a href="/freenode/knowledge/findingchannels.html">Finding Channels</a></li>
+                            <li><a href="/freenode/knowledge/resetpass.html">Resetting your Password</a></li>
+                        </ul>
+                    </div>
+                    <div class="vl"></div>
+                    <div>
+                        <ul>
+                            <li><a href="/freenode/knowledge/channelmodes.html">Channel Modes</a></li>
+                            <li><a href="/freenode/knowledge/chat.html">Connecting to freenode</a></li>
+                            <li><a href="/freenode/knowledge/extbans.html">Extbans</a></li>
+                            <li><a href="/freenode/knowledge/registration.html">Nickname Registration</a></li>
+                            <li><a href="/freenode/knowledge/usermodes.html">User Modes</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Background, click to close -->
+                <a href="#" class="modal-bg"></a>
+            </div>
+
+
+            <section class="certfp">
+                <h1>
+                    <span>Configuring SASL</span><span class="green">for Chatzilla
+                    </span>
+
+                </h1>
+                <p>
+                    This script is by Gryllida, for the ChatZilla <a href="https://addons.mozilla.org/en-US/firefox/addon/16/">add-on</a>   to Firefox.
+                </p>
+               <ol>
+                   <li>Install <a href="https://freenode.net/static/files/cz_sasl.js">the cz_sasl</a> script as you would any other script, following the <a href="http://chatzilla.hacksrus.com/faq/#install-script">instructions here</a>  
+                </li>
+                <li>
+                    Enter /plugin-pref cz_sasl
+                </li>
+                <li>Enter /plugin-pref cz_sasl sasl.username YOUR_USERNAME replacing YOUR_USERNAME with your registered nickname</li>
+                <li>Enter /plugin-pref cz_sasl sasl.password YOUR_PASSWORD replacing YOUR_PASSWORD with your NickServ password</li>
+                <li>If you want to continue connecting when SASL authentication fails, enter /plugin-pref cz_sasl sasl.proceed_on_fail true</li>
+               </ol>
+               <p>If everything has been configured correctly, the next time you connect you should see the message SASL authentication successful.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <p><a href="/freenode/index.html"><span class="dark-blue">free</span><span class="green">node</span></a></p>
+            <p>Quick Links</p>
+            <div class="connect">
+                <p>Connect with us</p>
+                <a href="https://twitter.com/freenodestaff"><img src="/freenode/images/twitter.png" alt="Twitter" /></a> 
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="/freenode/people/people.html">The people</a></li>
+                <li><a href="/freenode/policy/policy.html">The policies</a></li>
+                <li><a href="/freenode/acknowledgements/acknowledgements.html">Acknowledgements</a></li>
+                <li><a href="/freenode/archive/archive.html">News Archive / RSS / Atom</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://webchat.freenode.net/">Webchat
+                    chat.freenode.net:6697 / non-SSL: 6667</a> </li>
+                <li><a href="https://freenode.live/">freenode #live</a></li>
+                <li><a href="https://bbs.freenode.net/">#freenode-bbs</a></li>
+                <li><a href="https://jobs.freenode.net/">#freenode-jobs</a></li>
+                <li><a href="#greeting-modal">Knowledge base</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

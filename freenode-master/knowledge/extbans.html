@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="extbans.css">
+    <title>freenode | Extbans</title>
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="container">
+            <nav class="desktop-nav">
+                <div class="logo"><a href="/freenode/index.html">free<span class="green">node</span></a></div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="/freenode/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://webchat.freenode.net/">Chat</a>
+                        </li>
+                        <li>
+                            <a href="#greeting-modal" href="https://freenode.net/kb/all">Knowledge</a>
+                        </li>
+                        <li>
+                            <a href="https://bbs.freenode.net/">Share</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search_box">
+                    <img class="fas fa-search" src="/freenode/images/search.png" alt="Search" />
+                    <input type="text" placeholder="       Search">
+                </div>
+            </nav>
+
+            <!-- Mobile nav -->
+            <nav class="mobile-nav">
+                <div>
+                    <a href="#nav-modal"><img src="/freenode/images/nav.png" alt="Navigation icon" /></a>
+                    <p>free<span class="green">node</span></p>
+                </div>
+                <img src="/freenode/images/search.png" alt="Search" />
+            </nav>
+
+            <!-- Mobile nav -->
+            <div class="mobile-modal-nav-container" id="nav-modal">
+                <div class="mobile-modal-nav">
+                    <ul>
+                        <li><a href="/freenode/index.html">Home</a></li>
+                        <hr>
+                        <li><a href="https://webchat.freenode.net/">Chat</a></li>
+                        <hr>
+                        <!--
+                          <li>Knowledge base</li>
+                      -->
+                        <div class="accordionMenu">
+                            <input type="radio" name="trg1" id="acc1">
+                            <label for="acc1">Knowledge base</label>
+                            <div class="content">
+                                <ul class="inner">
+                                    <li><a href="/freenode/knowledge/certfp.html">CertFP</a></li>
+                                    <li><a href="/freenode/knowledge/channels.html">Channels</a></li>
+                                    <li><a href="/freenode/knowledge/sasl.html">Connecting with SASL</a></li>
+                                    <li><a href="/freenode/knowledge/findingchannels.html">Finding Channels</a></li>
+                                    <li><a href="/freenode/knowledge/resetpass.html">Resetting your Password</a></li>
+                                    <li><a href="/freenode/knowledge/channelmodes.html">Channel Modes</a></li>
+                                    <li><a href="/freenode/knowledge/chat.html">Connecting to freenode</a></li>
+                                    <li><a href="/freenode/knowledge/extbans.html">Extbans</a></li>
+                                    <li><a href="/freenode/knowledge/registration.html">Nickname Registration</a></li>
+                                    <li><a href="/freenode/knowledge/usermodes.html">User Modes</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <li><a href="https://bbs.freenode.net/">Share</a></li>
+                        <hr>
+                    </ul>
+                </div>
+
+                <!-- Background, click to close -->
+                <a href="#" class="nav-modal-bg"></a>
+            </div>
+
+            <!-- Modal container -->
+            <div class="modal-container" id="greeting-modal">
+
+                <!-- Modal  -->
+                <div class="modal">
+                    <div>
+                        <ul>
+                            <li><a href="/freenode/knowledge/certfp.html">CertFP</a></li>
+                            <li><a href="/freenode/knowledge/channels.html">Channels</a></li>
+                            <li><a href="/freenode/knowledge/sasl.html">Connecting with SASL</a></li>
+                            <li><a href="/freenode/knowledge/findingchannels.html">Finding Channels</a></li>
+                            <li><a href="/freenode/knowledge/resetpass.html">Resetting your Password</a></li>
+                        </ul>
+                    </div>
+                    <div class="vl"></div>
+                    <div>
+                        <ul>
+                            <li><a href="/freenode/knowledge/channelmodes.html">Channel Modes</a></li>
+                            <li><a href="/freenode/knowledge/chat.html">Connecting to freenode</a></li>
+                            <li><a href="/freenode/knowledge/extbans.html">Extbans</a></li>
+                            <li><a href="/freenode/knowledge/registration.html">Nickname Registration</a></li>
+                            <li><a href="/freenode/knowledge/usermodes.html">User Modes</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Background, click to close -->
+                <a href="#" class="modal-bg"></a>
+            </div>
+
+
+            <section class="certfp">
+                <h1>
+                    <span>Ext</span><span class="green">bans</span>
+
+                </h1>
+                <p>
+                    Bans, quiets and invite and ban exemptions conventionally accept the format nick!user@host. On freenode another syntax, known as "extban", is accepted. These entries have the general format of X:data.
+                </p>
+                <h3>Matching extbans</h3>
+                <p>
+                    These extbans match users in additional ways, for example, by account name.
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>a:</td>
+                        <td>Matches a user in the format of nick!user@host+realname.</td>
+                    </tr>
+                    <tr>
+                        <td>j:</td>
+                        <td>Matches anyone in the given channel. Does not support wildcards.</td>
+                    </tr>
+                    <tr>
+                        <td>n:</td>
+                        <td>Matches users in a matching connect class.</td>
+                    </tr>
+                    <tr>
+                        <td>r:</td>
+                        <td>Matches users with a given realname.</td>
+                    </tr>
+                    <tr>
+                        <td>s:</td>
+                        <td>Matches users on a matching server.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>z:</td>
+                        <td>Matches having the given TLS certificate fingerprint.</td>
+                    </tr>
+                    <tr>
+                        <td>R:</td>
+                        <td>Matches users logged into a matching account.</td>
+                    </tr>
+                    <tr>
+                        <td>U:</td>
+                        <td>Matches unregistered users matching the given traditional banmask.</td>
+                    </tr>
+                </table>
+                <h3>
+                    Acting extbans
+                </h3>
+                <p>These extbans apply special restrictions to users matching the banmask.</p>
+
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>c:</td>
+                        <td>Blocks any messages that contain formatting codes from matching users</td>
+                    </tr>
+                    <tr>
+                        <td>m:</td>
+                        <td>Blocks messages from matching users, while still allowing them to be on the channel (mute)</td>
+                    </tr>
+                    <tr>
+                        <td>p:</td>
+                        <td>Blocks part messages from matching users</td>
+                    </tr>
+                    <tr>
+                        <td>A:</td>
+                        <td>Blocks invites by matching users even when channel mode +A is set</td>
+                    </tr>
+                    <tr>
+                        <td>B:</td>
+                        <td>Blocks all-caps messages from matching users
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C:</td>
+                        <td>Blocks CTCPs from matching users</td>
+                    </tr>
+                    <tr>
+                        <td>N:</td>
+                        <td>Blocks nick changes from matching users</td>
+                    </tr>
+                    <tr>
+                        <td>Q:</td>
+                        <td>Blocks kicks by matching users</td>
+                    </tr>
+                    <tr>
+                        <td>S:</td>
+                        <td>Removes formatting/color codes from matching users (an alternative to c:)</td>
+                    </tr>
+                    <tr>
+                        <td>T:</td>
+                        <td>Blocks notices from matching users</td>
+                    </tr>
+                </table>
+
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <p><a href="/freenode/index.html"><span class="dark-blue">free</span><span class="green">node</span></a></p>
+            <p>Quick Links</p>
+            <div class="connect">
+                <p>Connect with us</p>
+                <a href="https://twitter.com/freenodestaff"><img src="/freenode/images/twitter.png" alt="Twitter" /></a> 
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="/freenode/people/people.html">The people</a></li>
+                <li><a href="/freenode/policy/policy.html">The policies</a></li>
+                <li><a href="/freenode/acknowledgements/acknowledgements.html">Acknowledgements</a></li>
+                <li><a href="/freenode/archive/archive.html">News Archive / RSS / Atom</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://webchat.freenode.net/">Webchat
+                    chat.freenode.net:6697 / non-SSL: 6667</a> </li>
+                <li><a href="https://freenode.live/">freenode #live</a></li>
+                <li><a href="https://bbs.freenode.net/">#freenode-bbs</a></li>
+                <li><a href="https://jobs.freenode.net/">#freenode-jobs</a></li>
+                <li><a href="#greeting-modal">Knowledge base</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

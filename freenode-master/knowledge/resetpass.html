@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="knowledge.css">
+    <title>freenode | CertFP</title>
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="container">
+            <nav class="desktop-nav">
+                <div class="logo"><a href="/freenode/index.html">free<span class="green">node</span></a></div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="/freenode/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://webchat.freenode.net/">Chat</a>
+                        </li>
+                        <li>
+                            <a href="#greeting-modal" href="https://freenode.net/kb/all">Knowledge</a>
+                        </li>
+                        <li>
+                            <a href="https://bbs.freenode.net/">Share</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search_box">
+                    <img class="fas fa-search" src="/freenode/images/search.png" alt="Search" />
+                    <input type="text" placeholder="       Search">
+                </div>
+            </nav>
+
+            <!-- Mobile nav -->
+            <nav class="mobile-nav">
+                <div>
+                    <a href="#nav-modal"><img src="/freenode/images/nav.png" alt="Navigation icon" /></a>
+                    <p>free<span class="green">node</span></p>
+                </div>
+                <img src="/freenode/images/search.png" alt="Search" />
+            </nav>
+
+            <!-- Mobile nav -->
+            <div class="mobile-modal-nav-container" id="nav-modal">
+                <div class="mobile-modal-nav">
+                    <ul>
+                        <li><a href="/freenode/index.html">Home</a></li>
+                        <hr>
+                        <li><a href="https://webchat.freenode.net/">Chat</a></li>
+                        <hr>
+                        <!--
+                          <li>Knowledge base</li>
+                      -->
+                        <div class="accordionMenu">
+                            <input type="radio" name="trg1" id="acc1">
+                            <label for="acc1">Knowledge base</label>
+                            <div class="content">
+                                <ul class="inner">
+                                    <li><a href="/freenode/knowledge/certfp.html">CertFP</a></li>
+                                    <li><a href="/freenode/knowledge/channels.html">Channels</a></li>
+                                    <li><a href="/freenode/knowledge/sasl.html">Connecting with SASL</a></li>
+                                    <li><a href="/freenode/knowledge/findingchannels.html">Finding Channels</a></li>
+                                    <li><a href="/freenode/knowledge/resetpass.html">Resetting your Password</a></li>
+                                    <li><a href="/freenode/knowledge/channelmodes.html">Channel Modes</a></li>
+                                    <li><a href="/freenode/knowledge/chat.html">Connecting to freenode</a></li>
+                                    <li><a href="/freenode/knowledge/extbans.html">Extbans</a></li>
+                                    <li><a href="/freenode/knowledge/registration.html">Nickname Registration</a></li>
+                                    <li><a href="/freenode/knowledge/usermodes.html">User Modes</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <li><a href="https://bbs.freenode.net/">Share</a></li>
+                        <hr>
+                    </ul>
+                </div>
+
+                <!-- Background, click to close -->
+                <a href="#" class="nav-modal-bg"></a>
+            </div>
+
+            <!-- Modal container -->
+            <div class="modal-container" id="greeting-modal">
+
+                <!-- Modal  -->
+                <div class="modal">
+                    <div>
+                        <ul>
+                            <li><a href="/freenode/knowledge/certfp.html">CertFP</a></li>
+                            <li><a href="/freenode/knowledge/channels.html">Channels</a></li>
+                            <li><a href="/freenode/knowledge/sasl.html">Connecting with SASL</a></li>
+                            <li><a href="/freenode/knowledge/findingchannels.html">Finding Channels</a></li>
+                            <li><a href="/freenode/knowledge/resetpass.html">Resetting your Password</a></li>
+                        </ul>
+                    </div>
+                    <div class="vl"></div>
+                    <div>
+                        <ul>
+                            <li><a href="/freenode/knowledge/channelmodes.html">Channel Modes</a></li>
+                            <li><a href="/freenode/knowledge/chat.html">Connecting to freenode</a></li>
+                            <li><a href="/freenode/knowledge/extbans.html">Extbans</a></li>
+                            <li><a href="/freenode/knowledge/registration.html">Nickname Registration</a></li>
+                            <li><a href="/freenode/knowledge/usermodes.html">User Modes</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Background, click to close -->
+                <a href="#" class="modal-bg"></a>
+            </div>
+
+
+            <section class="certfp">
+                <h1>
+                    <span>Resetting your</span><span class="green">Password</span>
+
+                </h1>
+                <p>
+                    If you have forgotten the password for your NickServ account and are unable to log in to it, you can
+                    send a password reset mail to the email address on your account with:
+                </p>
+                <div class="command">
+                    <div>
+                        <span>
+                            < &nbsp;</span>
+                                <p>/msg NickServ RESETPASS youraccountnamehere youremailhere</p> <span>&nbsp; ></span>
+                    </div>
+                </div>
+                <p>
+                    You should receive an email containing a command with a password reset key, which you can use on IRC
+                    to reset your password.
+                </p>
+                <p>If you do not receive the email, please check your spam folders etc.</p>
+                <p>If you already have an outstanding password reset mail, you cannot send another, but you can contact
+                    freenode staff in #freenode for assistance.</p>
+
+                <p>
+                    If you are logged in to your account already and need to change its password, you should instead use
+                    the following command:
+                </p>
+                <div class="command">
+                    <div>
+                        <span>
+                            < &nbsp;</span>
+                                <p>/msg NickServ SET PASSWORD newpasswordhere</p> <span>&nbsp; ></span>
+                    </div>
+                </div>
+                <p>
+
+                    If your account is compromised and you are unable to change or reset the password, please contact
+                    freenode staff in #freenode as soon as possible for assistance.
+                </p>
+
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <p><a href="/freenode/index.html"><span class="dark-blue">free</span><span class="green">node</span></a></p>
+            <p>Quick Links</p>
+            <div class="connect">
+                <p>Connect with us</p>
+                <a href="https://twitter.com/freenodestaff"><img src="/freenode/images/twitter.png" alt="Twitter" /></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="/freenode/people/people.html">The people</a></li>
+                <li><a href="/freenode/policy/policy.html">The policies</a></li>
+                <li><a href="/freenode/acknowledgements/acknowledgements.html">Acknowledgements</a></li>
+                <li><a href="/freenode/archive/archive.html">News Archive / RSS / Atom</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://webchat.freenode.net/">Webchat
+                        chat.freenode.net:6697 / non-SSL: 6667</a> </li>
+                <li><a href="https://freenode.live/">freenode #live</a></li>
+                <li><a href="https://bbs.freenode.net/">#freenode-bbs</a></li>
+                <li><a href="https://jobs.freenode.net/">#freenode-jobs</a></li>
+                <li><a href="#greeting-modal">Knowledge base</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
